@@ -1,0 +1,116 @@
+<!-- HTML -->
+<view>
+  <view class="modal" hidden="{{!showModal}}">
+    <form bindsubmit="handleFormSubmit">
+    <view class="form-group">
+        <text>凭证：</text>
+        <input class="input" type="text" value="{{EditData.token}}" data-field="token" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>名称：</text>
+        <input class="input" type="text" value="{{EditData.name}}" data-field="name" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>备注：</text>
+        <textarea class="example" value="{{EditData.message}}" data-field="message" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>车牌号：</text>
+        <input class="input" type="text" value="{{EditData.car_number}}" data-field="car_number" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>手机号码：</text>
+        <input class="input" type="number" value="{{EditData.phone}}" data-field="phone" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>出发地点：</text>
+        <input class="input" type="text" value="{{EditData.rst}}" data-field="rst" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>到达地点：</text>
+        <input class="input" type="text" value="{{EditData.dst}}" data-field="dst" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>出发日期：</text>
+        <picker class="picker" mode="date" value="{{EditData.start_date}}" data-field="start_date" bindchange="handleInputChange">
+        {{EditData.start_date}}
+        </picker>
+      </view>
+      <view class="form-group">
+        <text>出发时间：</text>
+        <picker class="picker" mode="time" value="{{EditData.start_time}}" data-field="start_time" bindchange="handleInputChange">
+        {{EditData.start_time}}
+      </picker>
+      </view>
+      <view class="form-group">
+        <text>到达日期：</text>
+        <picker class="picker" mode="date" value="{{EditData.end_date}}" data-field="end_date" bindchange="handleInputChange">
+        {{EditData.end_date}}
+        </picker>
+      </view>
+      <view class="form-group">
+        <text>到达时间：</text>
+        <picker class="picker" mode="time" value="{{EditData.end_time}}" data-field="end_time" bindchange="handleInputChange">
+        {{EditData.end_time}}
+      </picker>
+      </view>
+      <view class="form-group">
+        <text>总座位：</text>
+        <input class="input" type="number" value="{{EditData.total}}" data-field="total" bindinput="handleInputChange" required />
+      </view>
+      <view class="form-group">
+        <text>剩余座位：</text>
+        <input class="input" type="number" value="{{EditData.remain}}" data-field="remain" bindinput="handleInputChange" required />
+      </view>
+      <div class="buttons">
+        <button bindtap="hideEditModal">取消</button>
+        <button formType="submit">确定</button>
+      </div>
+    </form>
+  </view>
+</view>
+
+<view class="container">
+  <view class="header">车辆信息</view>
+  <view class="item">
+    <view class="label">名称:</view>
+    <view class="value">{{InitData.name}}</view>
+  </view>
+  <view class="item">
+    <view class="label">车牌号:</view>
+    <view class="value">{{InitData.car_number}}</view>
+  </view>
+  <view class="item">
+    <view class="label">手机号码:</view>
+    <view class="value">{{InitData.phone}}</view>
+  </view>
+  <view class="item">
+    <view class="label">出发地点:</view>
+    <view class="value">{{InitData.rst}}</view>
+  </view>
+  <view class="item">
+    <view class="label">目的地:</view>
+    <view class="value">{{InitData.dst}}</view>
+  </view>
+  <view class="item">
+    <view class="label">出发时间:</view>
+    <view class="value">{{InitData.start_date}} - {{InitData.start_time}}</view>
+  </view>
+  <view class="item">
+    <view class="label">到达时间:</view>
+    <view class="value">{{InitData.end_date}} - {{InitData.end_time}}</view>
+  </view>
+  <view class="item">
+    <view class="label">总座位:</view>
+    <view class="value">{{InitData.total}}</view>
+  </view>
+  <view class="item">
+    <view class="label">剩余座位:</view>
+    <view class="value">{{InitData.remain}}</view>
+  </view>
+  <view class="item">
+    <view class="label">备注:</view>
+    <text class="example">{{InitData.message}}</text>
+  </view>
+</view>
+<button bindtap="showEditModal">编辑</button>

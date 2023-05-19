@@ -1,0 +1,15 @@
+<!-- HTML -->
+<view class="page">
+  <view class="card-list">
+    <view class="card" wx:for="{{dataList}}" wx:key="{{index}}">
+      <view class="info">
+        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.name}}</view>
+        <view class="name">{{item.name}}</view>
+        <view class="gender">{{item.gender}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<!-- <view class="search-bar">
+    <input placeholder="搜索车牌号" bindinput="onSearchInput" />
+    <picker mode="date" value="{{date}}" bindchange="onDateChange">
+      <view class="picker-text">{{date}}</view>
+    </picker>
+</view>
+<view class="picker-container"> 请选择时间
+  <picker mode="time" value="{{time}}" bindchange="onTimeChange">
+    <view class="picker">
+      {{time}}
+    </view>
+  </picker>
+</view> -->
+<view class="table">
+  <view class="table-header">
+    <view class="table-cell">车牌号</view>
+    <view class="table-cell">电话号码</view>
+    <view class="table-cell">出发时间</view>
+    <view class="table-cell">出发地点</view>
+    <view class="table-cell">目的地</view>
+    <view class="table-cell">到达时间</view>
+    <view class="table-cell">总座位</view>
+    <view class="table-cell">剩余座位</view>
+  </view>
+  <view class="table-row" wx:for="{{ dataList }}" wx:key="index">
+    <view class="table-cell">{{ item.CarNumber }}</view>
+    <view class="table-cell">{{ item.Phone }}</view>
+    <text class="time-box">{{ item.Dst }}</text>
+    <view class="table-cell">{{ item.Rst }}</view>
+    <view class="table-cell">{{ item.Dst }}</view>
+    <view class="table-cell">{{ item.Phone }}</view>
+    <view class="table-cell">{{ item.Total }}</view>
+    <view class="table-cell">{{ item.Remain }}</view>
+  </view>
+</view>

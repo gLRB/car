@@ -1,0 +1,60 @@
+
+<view class="container">
+  <form bindsubmit="handleSubmit">
+    <view class="form-item">
+      <text class="label">凭证：</text>
+      <input class="input" type="text" placeholder="请输入凭证" value="{{formData.toekn}}" data-field="token" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">名称：</text>
+      <input class="input" type="text" placeholder="请输入名称" value="{{formData.name}}" data-field="name" maxlength="10" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">备注：</text>
+      <textarea class="example" placeholder="请输入备注" value="{{formData.message}}" data-field="message" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">车牌号：</text>
+      <input class="input" type="text" placeholder="请输入车牌号" value="{{formData.licensePlate}}" data-field="licensePlate" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">电话号码：</text>
+      <input class="input" type="number" placeholder="请输入电话号码" value="{{formData.phoneNumber}}" data-field="phoneNumber" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">出发时间：</text>
+        <picker class="picker" mode="date" value="{{formData.departureDate}}"data-field="departureDate" bindchange="handleInputChange">
+          {{formData.departureDate || '请选择出发日期'}}
+        </picker>
+        <view style="white-space:pre"> ~ </view>
+        <picker class="picker" mode="time" value="{{formData.departureTime}}"data-field="departureTime" bindchange="handleInputChange">
+          {{formData.departureTime || '请选择出发时间'}}
+        </picker>
+      
+    </view>
+    <view class="form-item">
+      <text class="label">出发地点：</text>
+      <input class="input" type="text" placeholder="请输入出发地点" value="{{formData.departurePlace}}" data-field="departurePlace" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">目的地：</text>
+      <input class="input" type="text" placeholder="请输入目的地" value="{{formData.destination}}" data-field="destination" bindinput="handleInputChange" />
+    </view>
+    <view class="form-item">
+      <text class="label">到达时间：</text>
+      <picker class="picker" mode="date" value="{{formData.arrivalDate}}" data-field="arrivalDate" bindchange="handleInputChange">
+        {{formData.arrivalDate || '请选择到达日期'}}
+      </picker>
+      <view style="white-space:pre"> ~ </view>
+      <picker class="picker" mode="time" value="{{formData.arrivalTime}}"data-field="arrivalTime" bindchange="handleInputChange">
+        {{formData.arrivalTime || '请选择到达时间'}}
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="label">总座位：</text>
+      <input class="input" type="number" placeholder="请输入总座位" value="{{formData.totalSeats}}" data-field="totalSeats" bindinput="handleInputChange" />
+    </view>
+   
+    <button class="button" formType="submit">提交</button>
+  </form>
+</view>

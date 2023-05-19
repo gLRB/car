@@ -1,0 +1,236 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.header text {
+  color: #333;
+}
+
+.body {
+  height: 300px;
+}
+
+.row text {
+  width: 12%;
+  text-align: center;
+}
+
+.row text:first-child {
+  width: 18%;
+}
+
+.row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+.picker {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 固定表格的布局 */
+}
+
+.table-header {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  display: flex;
+}
+.table-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  flex: 1;
+  text-align: center;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 18rpx; /* 设置字体大小为 28rpx */
+}
+
+.table-row {
+  background-color: #6ca34d;
+  font-weight: lighter;
+  display: flex;
+}
+
+.time-box {
+  display: inline-block;
+  background-color: #a57878;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  font-size: 18rpx;
+  color: rgb(48, 31, 31);
+  transition: all 0.2s ease-in-out;
+
+}
+
+.time-box:hover {
+  transform: scale(1.05);
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.fixed-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgb(81, 152, 180);
+}
+
+/* WXSS */
+.page {
+  display: flex;
+  margin-top: 110px;
+  background-color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  background-color: #409eff;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 60rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  overflow: hidden;
+  box-shadow: 0px 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 60rpx;
+  height: 60rpx;
+  background-size: 40rpx;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search-input {
+  flex: 1;
+  height: 60rpx;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #333;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.content {
+  flex: 1;
+  background-color: #409eff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picker-container {
+  width: 100%;
+  margin: 3%;
+  padding: 5rpx;
+  background-color: rgb(211, 188, 87);
+  border-radius: 20rpx;
+  box-shadow: 0px 2rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+
+.picker-content {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+}
+
+/* WXSS */
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 48%;
+  background-color: rgb(204, 211, 113);
+  border-radius: 10rpx;
+  box-shadow: 0px 2rpx 6rpx rgba(0, 0, 0, 0.3);
+  margin-bottom: 20rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  white-space: pre-wrap;
+  text-align: left;
+  font-size: 28rpx;
+  color: rgb(44, 46, 53);
+}
+
+.card-title {
+  font-size: 30rpx;
+  color: rgb(29, 27, 25);
+  text-align: left;
+  font-weight: bold;
+}
+
+.gender {
+  font-size: 24rpx;
+  color: #999;
+}

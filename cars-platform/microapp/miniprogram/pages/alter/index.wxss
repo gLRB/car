@@ -1,0 +1,115 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.header {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.header text {
+  color: #333;
+}
+
+.body {
+  height: 300px;
+}
+
+.row text {
+  width: 12%;
+  text-align: center;
+}
+
+.row text:first-child {
+  width: 18%;
+}
+
+.row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.picker-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.picker {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  width: 200px;
+  text-align: center;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* 固定表格的布局 */
+}
+
+.table-header {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  display: flex;
+}
+.table-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+  flex: 1;
+  text-align: center;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 18rpx; /* 设置字体大小为 28rpx */
+}
+
+.table-row {
+  background-color: #6ca34d;
+  font-weight: lighter;
+  display: flex;
+}
+
+.time-box {
+  display: inline-block;
+  background-color: #a57878;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  font-size: 18rpx;
+  color: rgb(48, 31, 31);
+  transition: all 0.2s ease-in-out;
+
+}
+
+.time-box:hover {
+  transform: scale(1.05);
+  background-color: #f5f5f5;
+  color: #333;
+}
+

@@ -1,0 +1,46 @@
+<!-- HTML -->
+<view class="fixed-view">
+  <view class="header">
+    <view class="search-container">
+      <input type="tel" class="search-input" placeholder="请输入手机号" bindinput="SearchPhone"/>
+      <view class="icon">》</view>
+      <input type="tel" class="search-input" placeholder="请输入出发地" bindinput="SearchRst"/>
+    </view>
+  </view>
+  <view class="content">
+    <view class="picker-container">
+      <picker mode="date" start="2022-01-01" end="2023-12-31" value="{{date}}" bindchange="onDateChange">
+        <view class="picker-content">{{date || "请选择日期"}}</view>
+      </picker>
+    </view>
+    <view class="picker-container">
+      <picker mode="time" start="00:00" end="23:59" value="{{time}}" bindchange="onTimeChange">
+        <view class="picker-content">{{time || "请选择时间"}}</view>
+      </picker>
+    </view>
+    <view class="picker-container">
+      <picker mode="selector" range="{{TimeStamp}}" value="{{selectTimeStamp}}"  bindchange="onPickerChange">
+        <view class="picker-content">{{stamp}}: {{selectTimeStamp}}</view>
+      </picker>
+    </view>
+
+  </view>
+</view>
+
+<!-- HTML -->
+<view class="page">
+  <view class="card-list">
+    <view class="card" wx:for="{{dataList}}" wx:key="{{index}}">
+      <navigator url="/pages/detail/index?id={{item.ID}}&name={{item.Name}}&phone={{item.Phone}}&start_date={{item.StartDate}}&end_date={{item.EndDate}}&start_time={{item.StartTime}}&end_time={{item.EndTime}}&rst={{item.Rst}}&dst={{item.Dst}}&remain={{item.Remain}}&total={{item.Total}}&car_number={{item.CarNumber}}&message={{item.Message}}">
+      <view class="info">
+        <view class="card-title"> {{ item.Name }}</view>
+        <view class="name">手机号: {{ item.Phone }}</view>
+        <view class="name">出发地: {{ item.Rst }}</view>
+        <view class="name">目的地: {{ item.Dst }}</view>
+        <view class="name">剩余座位: {{ item.Remain }}</view>
+        <view class="name">{{ item.StartDate }}-{{ item.StartTime }}</view>
+      </view>
+    </navigator>
+    </view>
+  </view>
+</view>
