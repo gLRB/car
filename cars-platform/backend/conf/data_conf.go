@@ -16,3 +16,10 @@ const (
 	LocalHost = "127.0.0.1"
 	LocalPort = "3306"
 )
+
+const (
+	ProdUserName = "root"
+	ProdPassWord = "123456"
+	ProdHost     = "127.0.0.1"
+	ProdPort     = "13357"
+)
