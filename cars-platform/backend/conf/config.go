@@ -3,7 +3,7 @@ package conf
 import "fmt"
 
 func GetCurEnv() string {
-	return "prod"
+	return "local"
 }
 
 func GetDBConf() string {
