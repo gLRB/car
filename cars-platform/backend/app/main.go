@@ -25,6 +25,7 @@
 package main
 
 import (
+	"backend/app/model"
 	. "backend/app/services"
 	"crypto/tls"
 	"github.com/gin-gonic/gin"
@@ -44,7 +45,7 @@ func main() {
 		Certificates: []tls.Certificate{cert},
 	}
 
-	//model.MysqlInit()
+	model.MysqlInit()
 
 	router := gin.Default()
 	router.GET("/test", Test)
